@@ -1,6 +1,9 @@
 package com.api.redis.entity;
 
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.io.Serializable;
 
@@ -8,11 +11,13 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
 public class User implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     private String id;
     private String name;
-    private String mobile;
     private String email;
+    private String password;
+    private String role;
 }
